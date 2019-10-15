@@ -94,7 +94,7 @@ multiplyNums(5, 10,(cb)=>{
 /////////////////CHALLENGE FIVE////////////////////////
 
 
-//////////UHHH..... NOT SURE- NEED TO REVISIT LATER///////
+//////////UHHH..SAY WHA?... NOT SURE- NEED TO REVISIT LATER///////
 function contains(item, list, cb) {
 cb(item, list,(cb)=>{
   contains(item, list)

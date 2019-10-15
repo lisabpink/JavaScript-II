@@ -5,6 +5,36 @@
 // The outer scope can be a parent function, or the top level of the script.
  
 
+
+
+
+function universe(universeName){
+  const superCluster1 = 'Virgo Supercluster';
+  const superCluster2 ='Hydra Supercluster';
+ console.log(`The ${universeName} is really large.`);
+
+
+  function galaxy(galaxyName){
+    const planet = 'Earth'
+    const air = 'oxygen'
+    console.log(`The most popular planet in ${galaxyName} is ${planet}.`);
+    
+      console.log(`${planet} is the only known intelligent life sustaining planet of ${universeName} and neighboring galaxy super clusters are ${superCluster1} and ${superCluster2} and the most popular element of ${planet} is ${air}.`);
+
+
+    
+  }// this closes the galaxy
+  galaxy('The Milky Way')
+}// this closes the universe 
+universe('Cosmos');
+
+
+
+
+
+
+
+
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
  
