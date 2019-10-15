@@ -1,8 +1,11 @@
+
+
+
 // Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  Study both the problem and the solution to figure out the rest of the problems.
 
 const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
  
-/* 
+ 
 
   // GIVEN THIS PROBLEM:
 
@@ -36,31 +39,77 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
   const test2 = firstItem(items, logExorbitantPrice);
   console.log(test2); // "this Pencil is worth a million dollars!"
-*/
+
+
+//DONE///////////////CHALLENGE ONE////////////////////////
 
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+
+  cb(arr.length);
 }
+
+getLength(items, (lengthOfArr) => {
+  console.log(lengthOfArr);
+});
+
+//DONE///////////////CHALLENGE TWO////////////////////////
+
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  cb(arr[3]);
 }
+last(items, (lastItem)=>{
+  console.log (lastItem);
+});
+
+
+//DONE///////////////CHALLENGE THREE////////////////////////
+
+
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+cb(x +y);
 }
+sumNums(5, 10, (cb) =>{
+  console.log(cb)
+});
+
+//DONE///////////////CHALLENGE FOUR////////////////////////
+
+
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  cb(x*y);
 }
+multiplyNums(5, 10,(cb)=>{
+  console.log(cb)
+});
 
+
+/////////////////CHALLENGE FIVE////////////////////////
+
+
+//////////UHHH..... NOT SURE- NEED TO REVISIT LATER///////
 function contains(item, list, cb) {
+cb(item, list,(cb)=>{
+  contains(item, list)
+})
+
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
 
-/* STRETCH PROBLEM */
+
+/////////////////CHALLENGE SIX////////////////////////
+
+
+
+/* STRETCH PROBLEM */ ////um.. no... sorry////
 
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
