@@ -96,8 +96,8 @@ console.log(runnersLargeSizeShirt);
 
 let ticketPriceTotal = 
 runners.reduce( function (added,cash) {
-console.log (`Accumulated total ${added}`);
-console.log (`Individual total ${cash.donation}`);
+//console.log (`Accumulated total ${added}`);
+//console.log (`Individual total ${cash.donation}`);
 return cash.donation + added;
 },0);
 console.log(ticketPriceTotal);
