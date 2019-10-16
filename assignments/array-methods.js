@@ -66,36 +66,69 @@ runners.forEach(runner =>{
 
 console.log(fullNames);
 
+
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runners' first names in uppercase because the director BECAME DRUNK WITH POWER. Populate an array called `firstNamesAllCaps`. This array will contain just strings.
-let firstNamesAllCaps = [];
-
-runners.map((firstNamesAllCaps)=>{})
 
 
+let firstNamesAllCaps = runners.map(cb => {
+  return cb.first_name.toUpperCase();
+});
 
 console.log(firstNamesAllCaps);
 
 
-
-
-
-
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue. We need a filtered version of the runners array, containing only those runners with large sized shirts so they can choose a different size. This will be an array of objects.
-let runnersLargeSizeShirt = [];
+
+let runnersLargeSizeShirt = runners.filter(cb => {
+  if (cb.shirt_size === "L") {
+    return true;
+  } else {
+    return false;
+  }
+});
 console.log(runnersLargeSizeShirt);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
-let ticketPriceTotal = 0;
+
+
+let ticketPriceTotal = 
+runners.reduce( function (added,cash) {
+console.log (`This is the accumulator ${added}`);
+console.log (`This is the total ${cash.donation}`);
+return cash.donation + added;
+},0);
 console.log(ticketPriceTotal);
+
+
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1 /// Array of emails
 
-// Problem 2
+let runnersEmail=[]
+const email = runnersEmail.forEach(runnersEmail => runner.email);
+console.log(runnersEmail);
 
-// Problem 3
+
+
+
+
+// Problem 2 /// Runners names (in alphabetical order-didnt do this yet) with company names for big participation sign 
+
+let fullNameCompany = [];
+// console.log(fullName);
+
+function fullFirstLastCompany(names){
+    console.log((`${names.first_name} ${names.last_name} from ${names.company_name}`))
+}
+
+fullNameCompany.push(runners)
+
+runners.forEach(fullFirstLastCompany)
+
+
+// Problem 3 /// sort names by donation amounts ///kind of rude but community center wants to ditch the 10 lowest donating companies next year to make room for higher donating companies

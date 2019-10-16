@@ -94,15 +94,23 @@ multiplyNums(5, 10,(cb)=>{
 /////////////////CHALLENGE FIVE////////////////////////
 
 
-//////////UHHH..SAY... NOT SURE- NEED TO REVISIT LATER///////
+            //////////UHHH.. ///////
+
+
 function contains(item, list, cb) {
-cb(item, list,(cb)=>{
-  contains(item, list)
+    // contains checks if an item is present inside of the given array/list.
+  // Pass true to the callback if it is, otherwise pass false.
+  console.log(cb(list.includes('Notebook')))
+}
+contains('Notebook', items, function(itemPresent) {
+  return itemPresent;
 })
 
-  // contains checks if an item is present inside of the given array/list.
-  // Pass true to the callback if it is, otherwise pass false.
-}
+
+
+
+
+
 
 
 /////////////////CHALLENGE SIX////////////////////////
