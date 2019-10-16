@@ -96,8 +96,8 @@ console.log(runnersLargeSizeShirt);
 
 let ticketPriceTotal = 
 runners.reduce( function (added,cash) {
-console.log (`This is the accumulator ${added}`);
-console.log (`This is the total ${cash.donation}`);
+console.log (`Accumulated total ${added}`);
+console.log (`Individual total ${cash.donation}`);
 return cash.donation + added;
 },0);
 console.log(ticketPriceTotal);
@@ -107,20 +107,21 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1 /// Array of emails
-
-let runnersEmail=[]
-const email = runnersEmail.forEach(runnersEmail => runner.email);
-console.log(runnersEmail);
+// Problem 1 /// Array/list of first names and email address to send follow up thank you emails 
 
 
+let emails = [];
+runners.forEach (elements =>{
+  emails.push(`${elements.first_name} ${elements.email}`)
+});
+console.log(emails);
 
 
+// Problem 2 /// Runners names with company names for big participation sign for the day of the event
 
-// Problem 2 /// Runners names (in alphabetical order-didnt do this yet) with company names for big participation sign 
 
 let fullNameCompany = [];
-// console.log(fullName);
+
 
 function fullFirstLastCompany(names){
     console.log((`${names.first_name} ${names.last_name} from ${names.company_name}`))
@@ -131,4 +132,14 @@ fullNameCompany.push(runners)
 runners.forEach(fullFirstLastCompany)
 
 
-// Problem 3 /// sort names by donation amounts ///kind of rude but community center wants to ditch the 10 lowest donating companies next year to make room for higher donating companies
+// Problem 3 /// sort company name by donation amounts ///kind of rude but community center wants to not invite companies that donated less than 50 next year to make room for potential higher donating companies- greedy jerks! 
+
+
+let lowDonors = 0;
+lowDonors = runners.filter(lowDonator => {
+  if (lowDonator.donation < 50)
+  return lowDonator.company_name
+})
+console.log(lowDonors);
+
+//////// I THINK I DID ALL THE THINGS YAAY  /////////
